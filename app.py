@@ -22,8 +22,8 @@ def index():
         time.sleep(10)
         r = r.json()["urls"]['get']
         r = requests.post(r,headers=headers).json()["output"]
-        return(render_template("Index2.html",result=r[0]))
+        return(render_template("index.html",result=r[0]))
     else:
-        return(render_template("Index2.html",result="waiting for rate to enter ........"))
+        return(render_template("index.html",result="waiting for rate to enter ........"))
 if __name__ == "__main__":
     app.run()
